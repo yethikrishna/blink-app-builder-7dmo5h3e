@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import { ChevronLeft, ChevronRight, Upload, MapPin, Clock, Heart, Users, Baby, Calendar, Target } from 'lucide-react'
-import { blink } from '../blink/client'
+import { kink } from '../kink/client'
 
 interface OnboardingFlowProps {
   onComplete: () => void
@@ -107,9 +107,9 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
   const handleComplete = async () => {
     setLoading(true)
     try {
-      const user = await blink.auth.me()
+      const user = await kink.auth.me()
       
-      await blink.db.user_profiles.create({
+      await kink.db.user_profiles.create({
         id: `profile_${user.id}`,
         user_id: user.id,
         first_name: data.firstName,
@@ -404,7 +404,7 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
             <div className="text-center mb-8">
               <Target className="w-12 h-12 text-primary mx-auto mb-4" />
               <h2 className="text-2xl font-bold text-accent mb-2">What are your goals?</h2>
-              <p className="text-muted-foreground">What do you hope to achieve through Kora?</p>
+              <p className="text-muted-foreground">What do you hope to achieve through KINK APP BUILDER?</p>
             </div>
             
             <div className="space-y-3">

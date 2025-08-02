@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Home, Users, MessageCircle, Calendar, Heart, Plus, Search, Settings, Bell } from 'lucide-react'
-import { blink } from '../blink/client'
+import { kink } from '../kink/client'
 
 interface UserProfile {
   id: string
@@ -23,10 +23,10 @@ export default function Dashboard() {
 
   const loadUserProfile = useCallback(async () => {
     try {
-      const currentUser = await blink.auth.me()
+      const currentUser = await kink.auth.me()
       setUser(currentUser)
       
-      const profiles = await blink.db.user_profiles.list({
+      const profiles = await kink.db.user_profiles.list({
         where: { user_id: currentUser.id },
         limit: 1
       })
@@ -46,7 +46,7 @@ export default function Dashboard() {
   }, [loadUserProfile])
 
   useEffect(() => {
-    const unsubscribe = blink.auth.onAuthStateChanged((state) => {
+    const unsubscribe = kink.auth.onAuthStateChanged((state) => {
       setUser(state.user)
       setLoading(state.isLoading)
     })
