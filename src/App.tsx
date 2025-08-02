@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { blink } from './blink/client'
+import { kink } from './kink/client'
 import LogoScreen from './components/LogoScreen'
 import AuthScreen from './components/AuthScreen'
 import SplashScreen from './components/SplashScreen'
@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     // Only set up auth listener after we've passed the initial screens
     if (appState === 'onboarding' || appState === 'dashboard') {
-      const unsubscribe = blink.auth.onAuthStateChanged((state) => {
+      const unsubscribe = kink.auth.onAuthStateChanged((state) => {
         setUser(state.user)
         setIsLoading(state.isLoading)
       })
@@ -57,10 +57,10 @@ function App() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center space-y-4">
-          <h2 className="text-2xl font-bold">Welcome to Kora</h2>
+          <h2 className="text-2xl font-bold">Welcome to KINK APP BUILDER</h2>
           <p className="text-muted-foreground">Please sign in to continue</p>
           <button
-            onClick={() => blink.auth.login()}
+            onClick={() => kink.auth.login()}
             className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90"
           >
             Sign In

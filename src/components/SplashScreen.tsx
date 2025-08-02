@@ -20,7 +20,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     >
       <img 
         src="/splash-screen.png" 
-        alt="Kora Splash Screen" 
+        alt="KINK APP BUILDER Splash Screen" 
         className="w-full h-full object-contain"
       />
     </div>

@@ -53,8 +53,8 @@ export default function AuthScreen({ onComplete }: AuthScreenProps) {
 
         {/* Heading */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-white mb-2">Your Community,</h1>
-          <h2 className="text-2xl font-bold text-white">your place</h2>
+          <h1 className="text-2xl font-bold text-white mb-2">KINK APP BUILDER</h1>
+          <h2 className="text-2xl font-bold text-white">BY YETI AI</h2>
         </div>
 
         {/* Social Sign Up Buttons */}

@@ -1,10 +1,10 @@
 import { createClient as createBlinkClient } from '@blinkdotnew/sdk'
 
-export const blink = createBlinkClient({
+export const kink = createBlinkClient({
   projectId: 'blink-app-builder-7dmo5h3e',
   authRequired: false
 })
 
-export const createClient = () => blink
+export const createClient = () => kink
 
-export default blink
+export default kink
